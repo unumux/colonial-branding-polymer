@@ -1,0 +1,47 @@
+<html><head><script src="main.build.js" defer=""></script><!--
+@license
+Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+--><!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+--><meta charset="UTF-8"></head><body><div hidden="" by-vulcanize=""><dom-module id="shared-styles" assetpath="/">
+    <template>
+        <style>:root{--steel-blue:#265b80;--charcoal:#1f3340;}</style>
+    </template>
+</dom-module>
+<dom-module id="button-styles" assetpath="/">
+    <template>
+        <style include="shared-styles">:host{display:inline-block;background:var(--steel-blue);color:#fff;padding:20px;font-size:16px;font-family:'Helvetica';font-weight:400;border-radius:3px;cursor:pointer;transition:0.15s background;}:host:hover{background:var(--charcoal);}:host[outlined]{background:#fff;color:var(--charcoal);padding:18px;border:2px solid var(--steel-blue);}</style>
+    </template>
+</dom-module>
+
+
+<dom-module id="ux-button" assetpath="ux-button/">
+  <template>
+    <style include="button-styles">:host{border:none;}</style>
+
+    <content></content>
+  </template>
+
+  </dom-module>
+
+
+<dom-module id="ux-button-link" assetpath="ux-button-link/">
+  <template>
+    <style include="button-styles">:host{text-decoration:none;}</style>
+
+    <content></content>
+  </template>
+
+  </dom-module>
+</div></body></html>
