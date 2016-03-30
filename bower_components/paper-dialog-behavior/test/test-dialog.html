@@ -8,6 +8,32 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<link rel="import" href="./ux-button/index.html">
-<link rel="import" href="./ux-button-link/index.html">
-<link rel="import" href="./ux-modal/index.html">
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../paper-dialog-behavior.html">
+<link rel="import" href="../paper-dialog-shared-styles.html">
+
+<dom-module id="test-dialog">
+  <template>
+    <style include="paper-dialog-shared-styles"></style>
+    <content></content>
+  </template>
+
+</dom-module>
+
+<script>
+
+(function() {
+
+  Polymer({
+
+    is: 'test-dialog',
+
+    behaviors: [
+      Polymer.PaperDialogBehavior
+    ]
+
+  });
+
+})();
+
+</script>

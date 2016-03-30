@@ -1,0 +1,57 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
+<link rel="import" href="../../bower_components/paper-dialog-behavior/paper-dialog-shared-styles.html">
+
+<link rel="import" href="../shared-styles.html">
+
+<!--
+An element providing a solution to no problem in particular.
+
+Example:
+
+    <button is="ux-button">Test button</button>
+
+Example:
+
+    <button is="ux-button" type="submit">Submit</button>
+
+
+@demo ux-modal/demo.html
+@hero hero.svg
+-->
+
+<dom-module id="ux-modal">
+  <template>
+    <style include="paper-dialog-shared-styles"></style>
+    <style include="shared-styles">
+      :host {
+        border: none;
+      }
+    </style>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'ux-modal',
+
+      properties: {
+          modal: {
+              type: Boolean,
+              value: true
+          }
+      },
+
+      behaviors: [
+          Polymer.PaperDialogBehavior
+      ],
+
+
+      // Element Lifecycle
+
+
+      // Element Behavior
+
+    });
+  </script>
+</dom-module>
