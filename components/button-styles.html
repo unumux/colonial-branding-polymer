@@ -1,0 +1,30 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="./shared-styles.html">
+
+<dom-module id="button-styles">
+    <template>
+        <style include="shared-styles">
+            :host {
+                display: inline-block;
+                background: var(--steel-blue);
+                color: #fff;
+                padding: 20px;
+                font-size: 16px;
+                font-family: 'Helvetica';
+                font-weight: 400;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: 0.15s background;
+            }
+            :host:hover {
+                background: var(--charcoal);
+            }
+            :host[outlined] {
+                background: #fff;
+                color: var(--charcoal);
+                padding: 18px;
+                border: 2px solid var(--steel-blue);
+            }
+        </style>
+    </template>
+</dom-module>

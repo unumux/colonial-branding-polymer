@@ -1,0 +1,43 @@
+<link rel="import" href="../../../polymer/polymer.html">
+<link rel="import" href="../button-styles.html">
+
+<!--
+An element providing a solution to no problem in particular.
+
+Example:
+
+    <button is="ux-button">Test button</button>
+
+Example:
+
+    <button is="ux-button" type="submit">Submit</button>
+
+
+@demo ux-button/demo.html
+@hero hero.svg
+-->
+
+<dom-module id="ux-button">
+  <template>
+    <style include="button-styles">
+      :host {
+        border: none;
+      }
+    </style>
+
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'ux-button',
+      extends: "button",
+
+      // Element Lifecycle
+
+
+      // Element Behavior
+
+    });
+  </script>
+</dom-module>
