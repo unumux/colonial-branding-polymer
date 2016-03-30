@@ -5,7 +5,7 @@ const browserSync = require("browser-sync").create();
 function initBS() {
     browserSync.init({
         server: {
-            baseDir: "./bower_components",
+            baseDir: ".",
             routes: {
                 "/components": "./components",
             }
