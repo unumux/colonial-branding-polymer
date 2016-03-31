@@ -1,0 +1,96 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../shared-styles.html">
+
+
+
+
+<!--
+An element providing a solution to no problem in particular.
+
+Example:
+
+    <ux-nav>
+        <a href="#"><img src="http://coloniallife.com/~/media/Colonial/Public%20Site/Images/Logos/logo.png?h=48&la=en&w=238" alt="Colonial Life"></a>
+        <a href="" class="right">Link 1</a>
+        <a href="" class="right">Link 2</a>
+    </ux-nav>
+
+Example:
+
+    <ux-nav fixed>
+        <a href="#"><img src="http://coloniallife.com/~/media/Colonial/Public%20Site/Images/Logos/logo.png?h=48&la=en&w=238" alt="Colonial Life"></a>
+        <a href="" class="right">Link 1</a>
+        <a href="" class="right">Link 2</a>
+    </ux-nav>
+
+
+@demo ux-button/demo.html
+@hero hero.svg
+-->
+
+<dom-module id="ux-nav">
+  <template>
+    <style include="shared-styles">
+      :host {
+        border: none;
+        display: flex;
+        flex-direction: row;
+        background: var(--steel-blue);
+      }
+
+      :host[fixed] {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+      }
+
+      :host > ::content * {
+          color: #fff;
+          font-size: 18px;
+      }
+
+      :host > ::content a {
+          text-decoration: none;
+          padding: 15px;
+          transition: 0.2s background-color;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+      }
+
+      :host > ::content a:hover {
+          background-color: rgba(0,0,0,0.5);
+      }
+
+      :host > ::content .right {
+          order: 9999;
+          margin-left: auto;
+      }
+
+      :host > ::content .right ~ .right {
+          margin-left: 0;
+      }
+
+    </style>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'ux-nav',
+      properties: {
+          fixed: {
+              type: Boolean,
+              value: false
+          }
+      }
+
+      // Element Lifecycle
+
+
+      // Element Behavior
+
+    });
+  </script>
+</dom-module>
