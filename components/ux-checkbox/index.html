@@ -1,0 +1,65 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../shared-styles.html">
+<!--
+A checkbox that can be styled
+
+Example:
+
+    <ux-checkbox>Label Content Here</ux-checkbox>
+
+@demo ux-checkbox/demo.html
+-->
+
+<dom-module id="ux-checkbox">
+    <template>
+        <style include="shared-styles">
+            :host {
+                position: relative;
+                display: inline-block;
+            }
+
+           :host input {
+                position: absolute;
+                bottom: 0;
+                opacity: 0;
+                width: 1px;
+                height: 1px;
+            }
+
+            :host label {
+                display: flex;
+                align-items: center;
+                line-height: 1em;
+
+            }
+
+            :host label::before {
+                content: '\2713';
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: 1em;
+                margin-right: 5px;
+                color: transparent;
+                transition: color 0.3s;
+                width: 20px;
+                height: 20px;
+                border: 1px solid var(--pewter);
+            }
+
+            :host input[type="checkbox"]:checked ~ label:before {
+                color: #000;
+            }
+
+        </style>
+
+        <input type="checkbox" id="box">
+        <label for="box"><content></content></label>
+
+    </template>
+    <script>
+        Polymer({
+            is: "ux-checkbox",
+        });
+    </script>
+</dom-module>
